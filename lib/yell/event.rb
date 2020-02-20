@@ -80,6 +80,10 @@ module Yell #:nodoc:
       Process.pid
     end
 
+    def request_id
+      env['action_dispatch.request_id']
+    end    
+
     # Accessor to the thread's id
     def thread_id
       Thread.current.object_id
